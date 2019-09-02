@@ -1,0 +1,167 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--选中状态icon的颜色和字体颜色-->
+        <item name="colorPrimary">@color/colorTheme</item>
+        <item name="colorPrimaryDark">@color/colorTheme</item>
+        <item name="colorAccent">@color/colorTheme</item>
+        <item name="android:windowAnimationStyle">@style/default_animation</item>
+    </style>
+
+    <!-- 默认Activity跳转动画 -->
+    <style name="default_animation" mce_bogus="1" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/activity_up_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/activity_up_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/activity_down_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/activity_down_out</item>
+    </style>
+
+    <!--查看大图页面，全屏显示-->
+    <style name="ViewBigPicTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorTheme</item>
+        <item name="colorPrimaryDark">@color/colorTheme</item>
+        <item name="colorAccent">@color/colorTheme</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowAnimationStyle">@style/default_animation_up</item>
+    </style>
+
+    <!--titleBar样式-->
+    <style name="ToolbarStyle" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="actionBarItemBackground">@drawable/toolbarItemBackground</item>
+        <item name="selectableItemBackground">@drawable/toolbarItemBackground</item>
+        <item name="titleTextAppearance">@style/ToolBar.Title</item>
+        <item name="subtitleTextAppearance">@style/Toolbar.SubTitle</item>
+        <item name="android:windowNoTitle">true</item>
+        <!--<item name="android:textSize">18sp</item> &lt;!&ndash;  搞掂字体大小&ndash;&gt;-->
+    </style>
+
+    <!--titleBar 标题-->
+    <style name="ToolBar.Title" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!--titleBar 副标题-->
+    <style name="Toolbar.SubTitle" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle">
+        <item name="android:textSize">9.0sp</item>
+        <item name="android:textColor">@color/color_sub_title</item>
+    </style>
+
+    <!--电影详情页-->
+    <style name="MyScrollPage" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--选中状态icon的颜色和字体颜色-->
+        <item name="colorPrimary">@color/colorTheme</item>
+        <item name="colorPrimaryDark">@color/colorTheme</item>
+        <item name="colorAccent">@color/colorTheme</item>
+        <item name="android:windowAnimationStyle">@style/default_animation_down</item>
+    </style>
+
+    <!--只有上一页面退出时有动画-->
+    <style name="default_animation_down" mce_bogus="1" parent="@android:style/Animation.Activity">
+        <item name="android:activityCloseEnterAnimation">@anim/activity_down_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/activity_down_out</item>
+    </style>
+
+    <!--打开图片详情时有动画-->
+    <style name="default_animation_up" mce_bogus="1" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/activity_up_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/activity_up_out</item>
+    </style>
+
+
+    <!-- ============================================================颜色============================================================ -->
+
+    <style name="toolbar_text_30">
+        <item name="android:textColor">@color/color_toolbar_text</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="toolbar_text_22">
+        <item name="android:textColor">@color/color_toolbar_text</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="toolbar_text_bold_22">
+        <item name="android:textColor">@color/color_toolbar_text</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="toolbar_text_18">
+        <item name="android:textColor">@color/color_toolbar_text</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="toolbar_text_mascot_name">
+        <item name="android:textColor">@color/color_toolbar_text</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="toolbar_text_17">
+        <item name="android:textColor">@color/color_toolbar_text</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="toolbar_text_16">
+        <item name="android:textColor">@color/color_toolbar_text</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="toolbar_text_bold_16">
+        <item name="android:textColor">@color/color_toolbar_text</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="toolbar_text_15">
+        <item name="android:textColor">@color/color_toolbar_text</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="toolbar_text_bold_14">
+        <item name="android:textColor">@color/color_toolbar_text</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="toolbar_text_14">
+        <item name="android:textColor">@color/color_toolbar_text</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="toolbar_text_bold_13">
+        <item name="android:textColor">@color/color_toolbar_text</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="toolbar_text_13">
+        <item name="android:textColor">@color/color_toolbar_text</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="toolbar_text_12">
+        <item name="android:textColor">@color/color_toolbar_text</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="toolbar_text_bold_12">
+        <item name="android:textColor">@color/color_toolbar_text</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="toolbar_text_11">
+        <item name="android:textColor">@color/color_toolbar_text</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="toolbar_text_10">
+        <item name="android:textColor">@color/color_toolbar_text</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+</resources>

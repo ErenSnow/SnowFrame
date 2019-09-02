@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FBA98F</color>
+    <color name="colorPrimaryDark">#FBA98F</color>
+    <color name="colorAccent">#FBA98F</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <color name="colorTheme">#FBA98F</color>
+    <color name="colorTransparency">#00ffffff</color>
+    <color name="color_sub_title">#99ffffff</color>
+    <!--页面背景的颜色-->
+    <color name="color_page_bg">#F1F3F4</color>
+    <color name="color_toolbar_text">#333333</color>
+
+    <!--图标颜色-->
+    <color name="color_default_bar">#969696</color>
+
+    <!--开屏页圆点-->
+    <color name="round_plash">#EBE7E7</color>
+    <color name="round_plash_select">#FA655A</color>
+
+    <!--Dialog-->
+    <color name="text_select_pressed">#1000</color>
+    <color name="color_left_dialog">#197BF2</color>
+    <color name="color_right_dialog">#6E6E6E</color>
+
+    <!--Dialog-->
+    <color name="color_dialog_pink">#FF8888</color>
+    <color name="color_dialog_red">#FF5153</color>
+
+    <!-- 二维码 -->
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="result_view">#B0000000</color>
+    <color name="viewfinder_frame">#90FFFFFF</color>
+    <color name="result_point_color">#C0FFFF00</color>
+    <color name="laser_color">#0F0</color>
+    <color name="corner_color">#00FF00</color>
+
+    <color name="corner_login_bg">#FF8484</color>
+    <color name="color_login_phone_yellow">#EFDDB2</color>
+    <color name="color_phone_code">#FFB942</color>
+
+    <color name="white_10_alpha">#1affffff</color>
+    <color name="white_15_alpha">#26ffffff</color>
+    <color name="white_20_alpha">#33ffffff</color>
+    <color name="white_25_alpha">#3fffffff</color>
+    <color name="white_30_alpha">#4cffffff</color>
+    <color name="white_50_alpha">#7fffffff</color>
+    <color name="white_60_alpha">#99ffffff</color>
+    <color name="white_70_alpha">#b2ffffff</color>
+    <color name="white_80_alpha">#ccffffff</color>
+    <color name="white_90_alpha">#e6ffffff</color>
+
+    <color name="black_5_alpha">#0d000000</color>
+    <color name="black_10_alpha">#1a000000</color>
+    <color name="black_15_alpha">#26000000</color>
+    <color name="black_20_alpha">#33000000</color>
+    <color name="black_25_alpha">#3f000000</color>
+    <color name="black_30_alpha">#4c000000</color>
+    <color name="black_40_alpha">#66000000</color>
+    <color name="black_50_alpha">#7f000000</color>
+    <color name="black_60_alpha">#99000000</color>
+    <color name="black_70_alpha">#b2000000</color>
+    <color name="black_80_alpha">#cc000000</color>
+    <color name="black_85_alpha">#d9000000</color>
+    <color name="black_90_alpha">#e6000000</color>
+
+
+    <color name="color_active_line_bg">#F4F4F4</color>
+    <color name="color_scrollbar">#777D7D7D</color>
+    <color name="color_title_red">#B83A3E</color>
+
+</resources>

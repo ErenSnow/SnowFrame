@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_item_active"
+        android:icon="@drawable/ic_nav_active_sel"
+        android:title="@string/active_name" />
+
+    <item
+        android:id="@+id/menu_item_find"
+        android:icon="@drawable/ic_nav_find_nor"
+        android:title="@string/find_name" />
+
+    <item
+        android:id="@+id/menu_item_ip"
+        android:icon="@drawable/ic_nav_ip_nor"
+        android:title="@string/ip_name" />
+
+    <item
+        android:id="@+id/menu_item_mine"
+        android:icon="@drawable/ic_nav_mine_nor"
+        android:title="@string/mine_name" />
+
+</menu>

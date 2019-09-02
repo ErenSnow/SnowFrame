@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ErenFrame</string>
+    <string name="active_name">活动</string>
+    <string name="find_name">发现</string>
+    <string name="ip_name">吉祥屋</string>
+    <string name="mine_name">我</string>
+</resources>
