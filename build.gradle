@@ -50,7 +50,6 @@ ext {
     rxjavaVersion = '2.1.14'
     rxandroidVersion = '2.1.1'
     rxpermissionsVersion = '0.9.5@aar'
-    glideVersion = '4.9.0'
     loggerVersion = '2.2.0'
     butterknifeVersion = '10.0.0'
     bannerVersion = '1.4.10'
