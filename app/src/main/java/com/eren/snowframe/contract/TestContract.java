@@ -19,8 +19,6 @@ public interface TestContract {
     interface View extends IBaseMvpView {
         /**
          * Banner图
-         *
-         * @param bannerList
          */
         void bannerList(List<BannerBean> bannerList);
     }
@@ -28,8 +26,6 @@ public interface TestContract {
     interface Model extends IBaseModel {
         /**
          * Banner图
-         *
-         * @return
          */
         Observable<BaseResponseBean<List<BannerBean>>> getBannerList();
     }

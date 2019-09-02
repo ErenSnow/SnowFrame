@@ -32,8 +32,8 @@ import me.yokeyword.fragmentation.SupportFragment;
 public class MainActivity extends SupportActivity {
 
     public static final int HOME = 0;
-    public static final int FIND = 1;
-    public static final int IP = 2;
+    public static final int IP = 1;
+    public static final int FIND = 2;
     public static final int MINE = 3;
 
     @BindView(R.id.bnv_bar)
@@ -90,22 +90,22 @@ public class MainActivity extends SupportActivity {
     private void initFragment(Bundle savedInstanceState) {
         if (savedInstanceState == null) {
             fragments[HOME] = new HomeFragment();
-            fragments[FIND] = new FindFragment();
             fragments[IP] = new IpFragment();
+            fragments[FIND] = new FindFragment();
             fragments[MINE] = new MineFragment();
 
             loadMultipleRootFragment(R.id.fl_container, HOME,
                     fragments[HOME],
-                    fragments[FIND],
                     fragments[IP],
+                    fragments[FIND],
                     fragments[MINE]);
         } else {
             // 这里库已经做了Fragment恢复,所有不需要额外的处理了, 不会出现重叠问题
             // 这里我们需要拿到mFragments的引用,也可以通过getSupportFragmentManager.getFragments()
             // 自行进行判断查找(效率更高些),用下面的方法查找更方便些
             fragments[HOME] = findFragment(HomeFragment.class);
-            fragments[FIND] = findFragment(FindFragment.class);
             fragments[IP] = findFragment(IpFragment.class);
+            fragments[FIND] = findFragment(FindFragment.class);
             fragments[MINE] = findFragment(MineFragment.class);
         }
     }
@@ -122,13 +122,13 @@ public class MainActivity extends SupportActivity {
                         item.setIcon(R.drawable.ic_nav_active_sel);
                         showHideFragment(fragments[HOME]);
                         break;
-                    case R.id.menu_item_find:
-                        item.setIcon(R.drawable.ic_nav_find_sel);
-                        showHideFragment(fragments[FIND]);
-                        break;
                     case R.id.menu_item_ip:
                         item.setIcon(R.drawable.ic_nav_ip_sel);
                         showHideFragment(fragments[IP]);
+                        break;
+                    case R.id.menu_item_find:
+                        item.setIcon(R.drawable.ic_nav_find_sel);
+                        showHideFragment(fragments[FIND]);
                         break;
                     case R.id.menu_item_mine:
                         item.setIcon(R.drawable.ic_nav_mine_sel);

@@ -3,17 +3,17 @@
     <item
         android:id="@+id/menu_item_active"
         android:icon="@drawable/ic_nav_active_sel"
-        android:title="@string/active_name" />
-
-    <item
-        android:id="@+id/menu_item_find"
-        android:icon="@drawable/ic_nav_find_nor"
-        android:title="@string/find_name" />
+        android:title="@string/home_name" />
 
     <item
         android:id="@+id/menu_item_ip"
         android:icon="@drawable/ic_nav_ip_nor"
         android:title="@string/ip_name" />
+
+    <item
+        android:id="@+id/menu_item_find"
+        android:icon="@drawable/ic_nav_find_nor"
+        android:title="@string/find_name" />
 
     <item
         android:id="@+id/menu_item_mine"
