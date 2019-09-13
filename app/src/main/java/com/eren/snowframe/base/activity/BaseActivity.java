@@ -66,8 +66,6 @@ public abstract class BaseActivity extends SupportActivity implements IBaseView 
         Logger.i("当前Activity:" + getClass().getSimpleName());
         // 将当前正在创建的活动添加到活动管理期里
         ActivityCollector.addActivity(this);
-        // 初始化Toolbar
-        setToolbar(toolBar);
         // 初始化布局
         initUI();
     }
@@ -78,6 +76,13 @@ public abstract class BaseActivity extends SupportActivity implements IBaseView 
      * @param extras 传递参数
      */
     protected void getParams(Bundle extras) {
+    }
+
+    /**
+     * 需要接收事件 重写该方法 并返回true
+     */
+    protected boolean regEvent() {
+        return false;
     }
 
     /**
@@ -100,41 +105,6 @@ public abstract class BaseActivity extends SupportActivity implements IBaseView 
                 onRefresh();
             }
         });
-    }
-
-    /**
-     * 需要接收事件 重写该方法 并返回true
-     */
-    protected boolean regEvent() {
-        return false;
-    }
-
-    /**
-     * 对Toolbar进行设置
-     */
-    protected void setToolbar(Toolbar toolbar) {
-        if (toolbar != null) {
-            setSupportActionBar(toolbar);
-            mActionBar = getSupportActionBar();
-            if (mActionBar != null) {
-                // 去除默认Title显示
-                mActionBar.setDisplayShowTitleEnabled(false);
-                mActionBar.setDisplayHomeAsUpEnabled(true);
-                // 设置返回键图片
-                mActionBar.setHomeAsUpIndicator(R.drawable.ic_back);
-            }
-            // 返回键的点击事件
-            toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                        finishAfterTransition();
-                    } else {
-                        onBackPressedSupport();
-                    }
-                }
-            });
-        }
     }
 
     /**
@@ -163,6 +133,34 @@ public abstract class BaseActivity extends SupportActivity implements IBaseView 
         }
         // 将一个马上要销毁的活动从管理器里移除
         ActivityCollector.removeActivity(this);
+    }
+
+    /**
+     * 对Toolbar进行设置
+     */
+    protected void setToolbar(Toolbar toolbar) {
+        if (toolbar != null) {
+            setSupportActionBar(toolbar);
+            mActionBar = getSupportActionBar();
+            if (mActionBar != null) {
+                // 去除默认Title显示
+                mActionBar.setDisplayShowTitleEnabled(false);
+                mActionBar.setDisplayHomeAsUpEnabled(true);
+                // 设置返回键图片
+                mActionBar.setHomeAsUpIndicator(R.drawable.ic_back);
+            }
+            // 返回键的点击事件
+            toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                        finishAfterTransition();
+                    } else {
+                        onBackPressedSupport();
+                    }
+                }
+            });
+        }
     }
 
     /**
@@ -201,6 +199,36 @@ public abstract class BaseActivity extends SupportActivity implements IBaseView 
         if (tvToolbar != null) {
             tvToolbar.setText(title);
         }
+        // 初始化Toolbar
+        setToolbar();
+    }
+
+    /**
+     * 默认Toolbar设置
+     */
+    protected void setToolbar() {
+        if (toolBar != null) {
+            setSupportActionBar(toolBar);
+            mActionBar = getSupportActionBar();
+            if (mActionBar != null) {
+                // 去除默认Title显示
+                mActionBar.setDisplayShowTitleEnabled(false);
+                mActionBar.setDisplayHomeAsUpEnabled(true);
+                // 设置返回键图片
+                mActionBar.setHomeAsUpIndicator(R.drawable.ic_back);
+            }
+            // 返回键的点击事件
+            toolBar.setNavigationOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                        finishAfterTransition();
+                    } else {
+                        onBackPressedSupport();
+                    }
+                }
+            });
+        }
     }
 
     /**
@@ -213,13 +241,6 @@ public abstract class BaseActivity extends SupportActivity implements IBaseView 
         }
     }
 
-    @Subscribe(threadMode = ThreadMode.MAIN, sticky = true)
-    public void onStickyEventBusCome(EventBean eventBean) {
-        if (eventBean != null) {
-            receiveStickyEvent(eventBean);
-        }
-    }
-
     /**
      * 接收到分发到事件
      *
@@ -227,6 +248,13 @@ public abstract class BaseActivity extends SupportActivity implements IBaseView 
      */
     protected void receiveEvent(EventBean eventBean) {
 
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN, sticky = true)
+    public void onStickyEventBusCome(EventBean eventBean) {
+        if (eventBean != null) {
+            receiveStickyEvent(eventBean);
+        }
     }
 
     /**
