@@ -153,13 +153,6 @@ public abstract class BaseFragment extends SupportFragment implements IBaseView 
         }
     }
 
-    @Subscribe(threadMode = ThreadMode.MAIN, sticky = true)
-    public void onStickyEventBusCome(EventBean eventBean) {
-        if (eventBean != null) {
-            receiveStickyEvent(eventBean);
-        }
-    }
-
     /**
      * 接收到分发到事件
      *
@@ -167,6 +160,13 @@ public abstract class BaseFragment extends SupportFragment implements IBaseView 
      */
     protected void receiveEvent(EventBean eventBean) {
 
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN, sticky = true)
+    public void onStickyEventBusCome(EventBean eventBean) {
+        if (eventBean != null) {
+            receiveStickyEvent(eventBean);
+        }
     }
 
     /**
@@ -238,6 +238,9 @@ public abstract class BaseFragment extends SupportFragment implements IBaseView 
         startActivityForResult(intent, requestCode);
     }
 
+    /**
+     * 信息提示
+     */
     @Override
     public void showToast(String msg) {
         ToastUtils.showToast(mContext, msg, 1000);

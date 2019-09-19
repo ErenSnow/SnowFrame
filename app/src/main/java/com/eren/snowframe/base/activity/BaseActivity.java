@@ -324,6 +324,9 @@ public abstract class BaseActivity extends SupportActivity implements IBaseView 
         startActivityForResult(intent, requestCode);
     }
 
+    /**
+     * 信息提示
+     */
     @Override
     public void showToast(String msg) {
         ToastUtils.showToast(msg);
