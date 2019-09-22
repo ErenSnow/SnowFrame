@@ -60,7 +60,9 @@ dependencies {
     implementation "com.github.bumptech.glide:glide:$rootProject.glideVersion"
     annotationProcessor "com.github.bumptech.glide:compiler:$rootProject.glideVersion"
     // Fragmentation
-    implementation "me.yokeyword:fragmentation:$rootProject.fragmentationVersion"
+    implementation "me.yokeyword:fragmentationx-core:$rootProject.fragmentationVersion"
+    implementation "me.yokeyword:fragmentationx:$rootProject.fragmentationVersion"
+    implementation "me.yokeyword:fragmentationx-swipeback:$rootProject.fragmentationVersion"
     // RecyclerView工具
     implementation "com.github.CymChad:BaseRecyclerViewAdapterHelper:$rootProject.BaseRecyclerViewAdapterHelperVersion"
     // EventBus 发布/订阅事件总线
